@@ -1,0 +1,31 @@
+﻿@page
+@model todoFrançois.Pages.AboutModel
+
+@{
+    ViewData["Title"] = "Todo Body Statistics";
+}
+<h2>Todo Body Statistic</h2>
+
+<table>
+    <tr>
+        <th>
+            Duree
+        </th>
+        <th>
+            Todo
+        </th>
+    </tr>
+
+    @foreach (var item in Model.TodoTasks)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duree)
+            </td>
+            <td>
+                @item.TodoCount
+            </td>
+        </tr>
+    }
+</table>
+
